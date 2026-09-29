@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "volterra-lab"
+version = "0.1.0"
+description = "Walk-forward ML volatility research, uncertainty and options risk visualization"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "pandas>=2.0,<3", "scipy>=1.10,<2", "scikit-learn>=1.4,<2", "plotly>=5.24,<7"]
+[project.scripts]
+volterra-lab = "volterra_lab.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+preview = ["matplotlib>=3.7,<4"]
